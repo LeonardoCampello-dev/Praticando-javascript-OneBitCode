@@ -1,28 +1,33 @@
-let pilotName = prompt("Qual seu nome, piloto?")
+const pilotName = prompt('Whats your name, pilot?')
 let shipVelocity = 0
-let newVelocity = prompt("A que velocidade você gostaria de acelerar a nave?")
-let velocityConfirmation = confirm("Você realmente quer setar a velocidade da sua nave a " + newVelocity + " km/s?")
-// Neste caso a condição está sendo usada para confirmar a resposta do piloto
+let newVelocity = prompt('How fast would you like to accelerate?')
+const velocityConfirmation = confirm(`You really have to accelerate your ship to ${newVelocity} km/s?`)
 
 if (velocityConfirmation == true) {
-    shipVelocity = newVelocity // Se a resposta for true a nova velocidade da nave será setada
+    shipVelocity = newVelocity
 } else {
-    alert("Alteração de velocidade cancelada!")
+    alert('Speed ​​change canceled!')
 }
 
-// Nesta parte do código serão aplicadas as condições de verificação da velocidade 
 if (shipVelocity <= 0) {
-    alert("Nave está parada. Considere partir e aumentar a velocidade.")
+    alert('Ship is stopped. Consider leaving and speeding up.')
+
 } else if (shipVelocity > 0 && shipVelocity < 40) {
-    alert("Você está devagar, podemos aumentar mais!")
+    alert('You are slow. We can increase more!')
+
 } else if (shipVelocity >= 40 && shipVelocity < 80) {
-    alert("Parece uma boa velocidade para manter.")
+    alert('It seems like a good speed to maintain.')
+
 } else if (shipVelocity >= 80 && shipVelocity < 100) {
-    alert("Velocidade alta. Considere diminuir.")
+    alert('High speed. Consider decreasing.')
 } else {
-    alert("Velocidade perigosa. Controle automático forçado.")
+
+    alert('Extreme speed, were going to die!')
 }
 
-alert("Pilot name: " + pilotName + "\nVelocity: " + shipVelocity + " km/s")
-// Por último será exibido o nome do piloto e a velocidade que o mesmo escolheu
+alert(`
+    Pilot name: ${pilotName}
+
+    Velocity: ${shipVelocity} km/s
+`)
 

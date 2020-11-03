@@ -1,16 +1,28 @@
 let spaceFold = 0
-// Essa variável equivale ao número de dobras espaciais que inicialmente começa em 0
-let spaceshipName = prompt("Qual o nome da sua nave, piloto?")
 
-let response = prompt("Deseja entrar em dobra espacial?\n1- Sim\n2- Não")
+let spaceshipName = prompt('What is the name of the spacecraft?')
 
-while (response == "1") {
+let response = prompt(
+    'Do you want to enter space warp?\n\n' +
+
+    '1 - Yes\n' +
+    '2 - No'
+)
+
+while (response == '1') {
     spaceFold += 1
-    response = prompt("Deseja realizar a próxima dobra?\n1- Sim\n2- Não")
-    // Neste momento estamos subscrevendo a variável response com uma nova pergunta
-    // Pois se não usarmos nenhuma variável para a resposta o programa entrará em looping infinito
+
+    response = prompt(
+        'Do you want to perform the next fold?\n\n' +
+
+        '1 - Yes\n' +
+        '2 - No'
+    )
 }
 
-alert("Nome da nave: " + spaceshipName + "\nQuantidade de dobras espaciais realizadas: " + spaceFold)
+alert(`
+    Spaceship name: ${spaceshipName}
 
+    Number of spatial folds performed: ${spaceFold}
+`)
 

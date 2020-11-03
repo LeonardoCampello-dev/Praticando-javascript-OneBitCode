@@ -1,22 +1,53 @@
-let lyDistance = prompt("Qual a distância em anos-luz, piloto?")
+let lyDistance = prompt('What is the distance in light years?')
 
-alert("Possíveis conversões de anos-luz:\n1- Parsec (pc)\n2- Unidade astronômica (au)\n3- Quilômetros (km)")
+alert(
+    'Possible conversions: \n\n' +
 
-let chosenOption = prompt("Qual das operações deseja realizar?")
+    '1- Parsec (pc)\n' +
+    '2- Astronomical unit (au)\n' +
+    '3- Kilometers (km)'
+)
+
+let chosenOption = prompt('Which of the operations do you want to perform?')
 
 switch (chosenOption) {
-    case "1":
+    case '1':
         let parsecConvertion = (lyDistance * 0.306601)
-        alert("Distância em anos-luz: " + lyDistance + "\nConversão desejada: " + parsecConvertion)
+
+        alert(`
+            Distance in light years: ${lyDistance}
+
+            Parsec: ${parsecConvertion}
+        `)
+
         break
-    case "2":
+
+    case '2':
         let astroUnitConvertion = (lyDistance * 63241.1)
-        alert("Distância em anos-luz: " + lyDistance + "\nConversão desejada: " + astroUnitConvertion)
+
+        alert(`
+            Distance in light years: ${lyDistance}
+
+            Astronomical unit: ${astroUnitConvertion}
+        `)
+
         break
-    case "3":
+
+    case '3':
         let kilometersConvertion = (lyDistance * (9.5 * Math.pow(10, 12)))
-        alert("Distância em anos-luz: " + lyDistance + "\nConversão desejada: " + kilometersConvertion)
+
+        alert(`
+            Distance in light years: ${lyDistance}
+
+            Kilometers: ${kilometersConvertion}
+        `)
+
         break
+
     default:
-        alert("Distância em anos-luz: " + lyDistance + "\nUnidade não identificada: Conversão fora do escopo.")
+        alert(`
+            Distance in light years: ${lyDistance}
+            
+            Unidentified unit
+        `)
 }

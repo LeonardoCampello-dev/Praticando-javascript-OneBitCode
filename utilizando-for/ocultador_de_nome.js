@@ -1,12 +1,10 @@
-let spaceshipName = prompt("Qual o nome da sua nave, piloto?")
+let spaceshipName = prompt('What is the name of the spacecraft?')
 
-let newSpaceship = "" // Variável para o novo nome da nave
+let newSpaceship = ''
 
-let substitutedCharacter = prompt("Qual caractere do nome da nave que você deseja substituir?")
-// Variável para armezenar o caracter a ser substituído
+const substitutedCharacter = prompt('Which character in the name of the ship you want to replace?')
 
-let newCharacter = prompt("Por qual novo caractere você deseja substituir?")
-// Variável para armezenar o caracter que vai substituir o antigo
+const newCharacter = prompt('Which new character do you want to replace?')
 
 for (let i = 0; i < spaceshipName.length; i++) {
     if (spaceshipName[i] == substitutedCharacter) {
@@ -16,4 +14,4 @@ for (let i = 0; i < spaceshipName.length; i++) {
     }
 }
 
-alert("New name of Spaceship: " + newSpaceship) 
+alert(`New name of Spaceship: ${newSpaceship}`) 

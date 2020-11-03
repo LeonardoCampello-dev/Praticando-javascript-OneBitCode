@@ -1,15 +1,13 @@
-let olderName = prompt("Qual o nome da pessoa mais velha")
-let olderAge = prompt("Qual a idade da pessoa mais velha?")
+const olderName = prompt('What is the name of the oldest person?')
+const olderAge = prompt('How old is the older person?')
 
-let newestName = prompt("Qual o nome da pessoa mais nova")
-let newestAge = prompt("Qual a idade da pessoa mais nova?")
+const newestName = prompt('What is the name of the youngest person?')
+const newestAge = prompt('How old is the youngest person?')
 
-let ageDifference
+const ageDifference = olderAge - newestAge
 
-ageDifference = olderAge - newestAge
+alert(`The oldest person’s name is ${olderName} and his age is ${olderAge}`)
 
-alert("O nome da pessoa mais velha é " + olderName + " e sua idade é " + olderAge)
+alert(`The youngest person’s name is ${newestName} and his age is ${newestAge}`)
 
-alert("O nome da pessoa mais nova é " + newestName + " e sua idade é " + newestAge)
-
-alert("A diferença de idade entre os dois é " + ageDifference)
+alert(`The age difference between the two is ${ageDifference} years`)
