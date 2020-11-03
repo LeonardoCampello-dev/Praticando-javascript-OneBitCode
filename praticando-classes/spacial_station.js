@@ -5,6 +5,7 @@ class Spaceship {
         this.hitched = false
         this.openEntranceDoors = false
     }
+
     hitchProcess() {
         this.hitched = true
         this.openEntranceDoors = true
@@ -13,49 +14,56 @@ class Spaceship {
 
 function showMenu() {
     let chosenOption
-    do {
-        chosenOption = prompt("MENU\n" +
-            "1 - Realizar engate \n" +
-            "2 - Imprimir espaçonaves \n" +
-            "3 - Sair do programa")
 
-    } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3")
+    do {
+        chosenOption = prompt(
+            'SPACE STATION MENU\n' +
+            '1 - Hitch ship \n' +
+            '2 - Print ships \n' +
+            '3 - Exit'
+        )
+
+    } while (chosenOption != '1' && chosenOption != '2' && chosenOption != '3')
+
     return chosenOption
 }
 
-let hitchedSpaceships = []
-let chosenOption
+let hitchedSpaceships = new Array()
 
 function registerShip() {
-    let spaceshipName = prompt("Qual o nome da sua espaçonave, piloto?")
-    let crewQuantity = prompt("Quantos tripulantes possui?")
+    let spaceshipName = prompt('Whats the name of your ship, pilot?')
+    let crewQuantity = prompt('How many crew members?')
+
     let spaceship = new Spaceship(spaceshipName, crewQuantity)
 
     return spaceship
 }
 
 function printShips(spaceships) {
-    let spaceshipList = ""
+    let spaceshipList = ``
 
     spaceships.forEach((spaceship, index) => {
-        spaceshipList += (index + 1) + "- " + spaceship.name +
-            " (" + spaceship.crewQuantity + " tripulantes)\n"
+        spaceshipList += `${index + 1} - ${spaceship.name} (${spaceship.crewQuantity} crew)\n`
     })
 
     alert(spaceshipList)
 }
 
-while (chosenOption != "3") {
+let chosenOption
+
+while (chosenOption != '3') {
     chosenOption = showMenu()
 
     switch (chosenOption) {
-        case "1":
+        case '1':
             let addShip = registerShip()
             addShip.hitchProcess()
             hitchedSpaceships.push(addShip)
+
             break
-        case "2":
+        case '2':
             printShips(hitchedSpaceships)
+
             break
     }
 }
