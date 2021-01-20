@@ -1,53 +1,35 @@
 <!DOCTYPE html>
-    <html lang="en">
-        
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Selecting</title>
-        
-        <script src="./index.js"></script>
-    </head>
-    
-    <body>
-        
-        <button onclick="show()">Show!</button>
-        
-        <p>
-            <label for="name">Nome: </label>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <input 
-                type="text" 
-                name="fullname" 
-                id="name"
-            >
-        </p>
+    <title>Selecting</title>
 
-        <div id="phones">
+    <script src="./index.js"></script>
+  </head>
 
-        <p>
-            <label for="phone01">Phone 01</label>
+  <body>
+    <button onclick="show()">Show!</button>
 
-            <input 
-                type="text" 
-                name="phone" 
-                id="phone01"
-            >
-        </p>
+    <p>
+      <label for="name">Nome: </label>
 
-        <p>
-            <label for="phone02">Phone 02</label>
+      <input type="text" name="fullname" id="name" />
+    </p>
 
-            <input 
-                type="text" 
-                name="phone" 
-                id="phone02"
-            >
-        </p>
-            
-        </div>
+    <div id="phones">
+      <p>
+        <label for="phone01">Phone 01</label>
 
-    </body>
+        <input type="text" name="phone" id="phone01" />
+      </p>
 
+      <p>
+        <label for="phone02">Phone 02</label>
+
+        <input type="text" name="phone" id="phone02" />
+      </p>
+    </div>
+  </body>
 </html>

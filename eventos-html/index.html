@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <title>Events</title>
+    <title>Events</title>
 
-        <script src="./index.js"></script>
-    </head>
+    <script src="./index.js"></script>
+  </head>
 
-    <body>
-        <p>
-            <button onclick="clickMe()">Click here</button>
-        </p>
+  <body>
+    <p>
+      <button onclick="clickMe()">Click here</button>
+    </p>
 
-        <p>
-            Focus
+    <p>
+      Focus
 
-            <input 
-                type="text" 
-                name="focus-text" 
-                onfocus="focusMe()" 
-            />
-        </p>
+      <input type="text" name="focus-text" onfocus="focusMe()" />
+    </p>
 
-        <p>
-            Blur
-            
-            <input 
-                type="text" 
-                name="blur-text" 
-                onblur="blurMe()" 
-            />
-        </p>
+    <p>
+      Blur
 
-        <p>
-            Change
-            <input 
-                type="text" 
-                name="change-text" 
-                onchange="changeMe()" 
-            />
-        </p>
+      <input type="text" name="blur-text" onblur="blurMe()" />
+    </p>
 
-        <p>
-            Keydown
-            <input 
-                type="text" 
-                name="change-text" 
-                onchange="keydown()" 
-            />
-        </p>
-        
-        <p>
-            <button ondblclick="doubleClick()">Double click</button>
-        </p>
+    <p>
+      Change
+      <input type="text" name="change-text" onchange="changeMe()" />
+    </p>
 
-        <p onmouseover="overMe()">Mouse over!</p>
+    <p>
+      Keydown
+      <input type="text" name="change-text" onchange="keydown()" />
+    </p>
 
-    </body>
+    <p>
+      <button ondblclick="doubleClick()">Double click</button>
+    </p>
 
+    <p onmouseover="overMe()">Mouse over!</p>
+  </body>
 </html>
